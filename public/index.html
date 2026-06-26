@@ -13,10 +13,13 @@
     h1 { font-size:24px; font-weight:700; }
     .subtitle { color:var(--muted); font-size:14px; margin-top:4px; }
     .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(420px,1fr)); gap:20px; }
-    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; }
+    /* min-width:0 lets the grid track shrink instead of the Chart.js canvas
+       forcing the card past its column into the next one. */
+    .card { background:var(--card); border:1px solid var(--border); border-radius:12px; padding:20px; min-width:0; }
     .card h2 { font-size:16px; font-weight:600; margin-bottom:4px; }
     .card .ind { color:var(--muted); font-size:12px; margin-bottom:12px; }
-    .chart-wrap { position:relative; height:260px; }
+    .chart-wrap { position:relative; height:260px; min-width:0; }
+    .chart-wrap canvas { position:absolute; inset:0; }
     .status { font-size:13px; color:var(--muted); padding:8px 0; }
     .status.error { color:var(--err); }
   </style>
