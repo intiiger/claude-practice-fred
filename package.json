@@ -1,0 +1,30 @@
+{
+  "name": "fred-dashboard",
+  "version": "0.1.0",
+  "description": "FRED 거시경제 대시보드 — 5개 카테고리 대표 지표 차트 (Express 프록시 + Chart.js)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "jest --testPathIgnorePatterns tests/e2e",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test:e2e": "playwright test",
+    "test:all": "jest --testPathIgnorePatterns tests/e2e && playwright test"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.45.0",
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/tests/e2e/"
+    ]
+  }
+}

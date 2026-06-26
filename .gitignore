@@ -22,6 +22,11 @@ __pycache__/
 # Reference materials (local only)
 ref/
 
+# Playwright test artifacts
+test-results/
+playwright-report/
+.playwright/
+
 # HALO Workflow runtime artifacts (generated during execution)
 .workflow/state.json
 .workflow/loopback-context.md
