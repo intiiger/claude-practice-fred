@@ -1,0 +1,17 @@
+{
+  "statusLine": {
+    "type": "command",
+    "command": "bash .claude/statusline.sh"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          { "type": "command", "command": "bash .claude/hooks/post-edit-lint.sh" },
+          { "type": "command", "command": "bash .claude/hooks/post-edit-unit-test.sh" }
+        ]
+      }
+    ]
+  }
+}

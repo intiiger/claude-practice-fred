@@ -1,0 +1,31 @@
+# Dependencies
+node_modules/
+.next/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build
+*.tsbuildinfo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python bytecode + pytest cache (esp. from fixture baseline / eval pytest runs)
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Reference materials (local only)
+ref/
+
+# HALO Workflow runtime artifacts (generated during execution)
+.workflow/state.json
+.workflow/loopback-context.md
+.workflow/phase-results/
+
+# Claude local (personal) settings — never publish
+.claude/settings.local.json
